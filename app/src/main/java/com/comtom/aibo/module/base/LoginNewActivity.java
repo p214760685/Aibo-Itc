@@ -75,7 +75,7 @@ public class LoginNewActivity extends BaseActivity {
 
     @Override
     public int getLayoutId() {
-        return R.layout.activity_login_sb;
+        return R.layout.activity_login_new;
     }
 
     @Override
@@ -84,8 +84,8 @@ public class LoginNewActivity extends BaseActivity {
         String type = PublicUtil.getMetaDate(activity);
         iv_logo = findViewById(R.id.iv_logo);
         if(IConstant.ITC.equals(type)){
-            iv_logo.setImageResource(R.mipmap.flash_logo_hs);
-//            iv_logo.setImageResource(R.mipmap.logo_itc_new);
+//            iv_logo.setImageResource(R.mipmap.flash_logo_hs);
+            iv_logo.setImageResource(R.mipmap.logo_itc_new);
         }else if(IConstant.THREEA.equals(type)){
             iv_logo.setImageResource(R.mipmap.a);
         }else if(IConstant.CRX.equals(type)){

@@ -36,7 +36,7 @@ public class SpalishActivity extends BaseActivity {
 
     @Override
     public int getLayoutId() {
-        return R.layout.activity_spalish_sb;
+        return R.layout.activity_spalish;
     }
 
     @Override
