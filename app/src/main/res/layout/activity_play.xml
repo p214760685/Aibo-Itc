@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/base_dimen_96"
+        android:background="#F8FFFF"
+        android:paddingLeft="@dimen/base_dimen_32"
+        android:paddingRight="@dimen/base_dimen_32">
+
+        <ImageView
+            android:id="@+id/shout_close"
+            android:layout_width="@dimen/base_dimen_48"
+            android:layout_height="@dimen/base_dimen_48"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_shout_close" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/play_board_line"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/play_board_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="点播"
+                    android:textColor="#255B7D"
+                    android:textSize="@dimen/base_dimen_36" />
+
+                <View
+                    android:id="@+id/play_board_view"
+                    android:layout_width="@dimen/base_dimen_56"
+                    android:layout_height="@dimen/base_dimen_6"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/bg_shout_line_on" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/play_dev_line"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/base_dimen_48">
+
+                <TextView
+                    android:id="@+id/play_dev_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="终端"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/base_dimen_36" />
+
+                <View
+                    android:id="@+id/play_dev_view"
+                    android:layout_width="@dimen/base_dimen_56"
+                    android:layout_height="@dimen/base_dimen_6"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/bg_shout_line_un" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/play_music_line"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/base_dimen_48">
+
+                <TextView
+                    android:id="@+id/play_music_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="内容"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/base_dimen_36" />
+
+                <View
+                    android:id="@+id/play_music_view"
+                    android:layout_width="@dimen/base_dimen_56"
+                    android:layout_height="@dimen/base_dimen_6"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/bg_shout_line_un" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/play_content_board"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F8FFFF"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/base_dimen_100"
+            android:paddingBottom="@dimen/base_dimen_80">
+
+            <ImageView
+                android:layout_width="@dimen/base_dimen_528"
+                android:layout_height="@dimen/base_dimen_400"
+                android:src="@mipmap/img_play_bg" />
+
+
+            <LinearLayout
+                android:id="@+id/play_dec_line"
+                android:layout_width="@dimen/base_dimen_200"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_dimen_60"
+                android:background="@drawable/bg_play_dec"
+                android:paddingLeft="@dimen/base_dimen_10"
+                android:paddingRight="@dimen/base_dimen_10"
+                android:paddingTop="@dimen/base_dimen_4"
+                android:paddingBottom="@dimen/base_dimen_4"
+                android:visibility="gone"
+                android:orientation="vertical"
+                >
+                <com.comtom.aibo.view.MarqueeTextView
+                    android:id="@+id/play_text_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/base_dimen_24"
+                    android:textColor="#255B7D"
+                    />
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/base_dimen_60"
+            android:layout_marginRight="@dimen/base_dimen_60"
+            android:layout_marginBottom="@dimen/base_dimen_80"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Chronometer
+                    android:id="@+id/play_chronometer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#255B7D"
+                    android:textSize="@dimen/base_dimen_28" />
+
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/base_dimen_5"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/play_max_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:textColor="#255B7D"
+                    android:textSize="@dimen/base_dimen_28" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/vertical_seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_dimen_12"
+                android:progressDrawable="@drawable/seekbar_volue"
+                android:thumb="@drawable/seekbar_thumb" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_dimen_68"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/play_type_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/play_type_img"
+                        android:layout_width="@dimen/base_dimen_48"
+                        android:layout_height="@dimen/base_dimen_48"
+                        android:src="@mipmap/icon_play_mode_dq" />
+
+                    <TextView
+                        android:id="@+id/play_type_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/base_dimen_12"
+                        android:text="顺序播放"
+                        android:textColor="#255B7D"
+                        android:textSize="@dimen/base_dimen_28" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/base_dimen_5"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:id="@+id/play_set_vole"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/base_dimen_48"
+                        android:layout_height="@dimen/base_dimen_48"
+                        android:src="@mipmap/icon_play_volum" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/base_dimen_12"
+                        android:text="音量调节"
+                        android:textColor="#255B7D"
+                        android:textSize="@dimen/base_dimen_28" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/base_dimen_60"
+                android:gravity="center_horizontal|bottom"
+                >
+                <LinearLayout
+                    android:id="@+id/play_control_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    >
+                    <ImageView
+                        android:id="@+id/play_img_up"
+                        android:layout_width="@dimen/base_dimen_92"
+                        android:layout_height="@dimen/base_dimen_92"
+                        android:src="@mipmap/icon_play_up"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#255B7D"
+                        android:textSize="@dimen/base_dimen_24"
+                        android:text="上一曲"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/play_control_pause"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/base_dimen_32"
+                    android:gravity="center_horizontal"
+                    >
+                    <ImageView
+                        android:id="@+id/play_img_pause"
+                        android:layout_width="@dimen/base_dimen_92"
+                        android:layout_height="@dimen/base_dimen_92"
+                        android:src="@mipmap/icon_play_pause"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#255B7D"
+                        android:textSize="@dimen/base_dimen_24"
+                        android:text="暂停"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/play_control_play"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/base_dimen_32"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    >
+                    <ImageView
+                        android:id="@+id/play_img_play"
+                        android:layout_width="@dimen/base_dimen_112"
+                        android:layout_height="@dimen/base_dimen_112"
+                        android:src="@mipmap/icon_play_play"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#255B7D"
+                        android:textSize="@dimen/base_dimen_24"
+                        android:text="播放"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/play_control_stop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/base_dimen_32"
+                    android:gravity="center_horizontal"
+                    >
+                    <ImageView
+                        android:id="@+id/play_img_stop"
+                        android:layout_width="@dimen/base_dimen_92"
+                        android:layout_height="@dimen/base_dimen_92"
+                        android:src="@mipmap/icon_play_stop"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#255B7D"
+                        android:textSize="@dimen/base_dimen_24"
+                        android:text="停止"
+                        />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/play_control_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/base_dimen_32"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    >
+                    <ImageView
+                        android:id="@+id/play_img_next"
+                        android:layout_width="@dimen/base_dimen_92"
+                        android:layout_height="@dimen/base_dimen_92"
+                        android:src="@mipmap/icon_play_next"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#255B7D"
+                        android:textSize="@dimen/base_dimen_24"
+                        android:text="下一曲"
+                        />
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/dev_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:paddingTop="@dimen/base_dimen_20"
+        android:scrollbars="none" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/music_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:paddingTop="@dimen/base_dimen_20"
+        android:scrollbars="none" />
+
+
+</LinearLayout>

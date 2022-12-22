@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/base_dimen_40"
+        android:paddingRight="@dimen/base_dimen_40"
+        android:paddingTop="@dimen/base_dimen_32"
+        android:paddingBottom="@dimen/base_dimen_120"
+        android:background="@drawable/bg_set_volum"
+        >
+
+        <ImageView
+            android:id="@+id/shout_close"
+            android:layout_width="@dimen/base_dimen_48"
+            android:layout_height="@dimen/base_dimen_48"
+            android:layout_gravity="right"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_shout_close" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dimen_80"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="音量"
+                android:textColor="#333333"
+                android:textSize="@dimen/base_dimen_32" />
+
+
+            <SeekBar
+                android:id="@+id/shout_seek_bar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:maxHeight="@dimen/base_dimen_32"
+                android:minHeight="@dimen/base_dimen_32"
+                android:layout_weight="1"
+                android:max="56"
+                android:progress="20"
+                android:progressDrawable="@drawable/seekbar_horizontal"
+                android:thumbOffset="0dp"
+                android:background="@null"
+                />
+
+
+            <TextView
+                android:id="@+id/shout_seek_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20"
+                android:textColor="#333333"
+                android:textSize="@dimen/base_dimen_32" />
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+</LinearLayout>

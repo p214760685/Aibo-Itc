@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/music_item_line"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/base_dimen_100"
+    android:paddingLeft="@dimen/base_dimen_32"
+    android:paddingRight="@dimen/base_dimen_32"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="@dimen/base_dimen_48"
+        android:layout_height="@dimen/base_dimen_48"
+        android:src="@mipmap/icon_board_select_music" />
+
+
+        <TextView
+            android:id="@+id/file_item_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/base_dimen_16"
+            android:ellipsize="end"
+            android:textColor="#333333"
+            android:textSize="@dimen/base_dimen_28" />
+
+    <CheckBox
+        android:id="@+id/file_item_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/base_dimen_10"
+        />
+
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/history_item_line"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/base_dimen_100"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/base_dimen_32"
+    android:paddingRight="@dimen/base_dimen_32">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/base_dimen_16"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/history_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:textColor="#333333"
+            android:textSize="@dimen/base_dimen_28" />
+
+        <TextView
+            android:id="@+id/history_item_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_dimen_6"
+            android:ellipsize="end"
+            android:textColor="#999999"
+            android:textSize="@dimen/base_dimen_24" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/history_item_delete"
+        android:layout_width="@dimen/base_dimen_50"
+        android:layout_height="@dimen/base_dimen_50"
+        android:layout_marginLeft="@dimen/base_dimen_20"
+        android:layout_marginRight="@dimen/base_dimen_40"
+        android:src="@mipmap/icon_his_delete" />
+
+
+    <ImageView
+        android:layout_width="@dimen/base_dimen_36"
+        android:layout_height="@dimen/base_dimen_36"
+        android:src="@mipmap/icon_arrow_right" />
+
+
+</LinearLayout>

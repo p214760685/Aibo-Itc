@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_view" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/base_dimen_100"
+        android:background="#255B7D"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/base_dimen_40"
+        android:paddingRight="@dimen/base_dimen_40">
+
+        <TextView
+            android:id="@+id/select_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="终端列表"
+            android:textColor="@color/white"
+            android:textSize="@dimen/base_dimen_28" />
+
+
+        <TextView
+            android:id="@+id/select_history"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="历史记录"
+            android:textColor="@color/white"
+            android:textSize="@dimen/base_dimen_24" />
+
+    </LinearLayout>
+
+    <com.haozi.dev.smartframe.view.refresh.MySmartRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ms_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+
+    </com.haozi.dev.smartframe.view.refresh.MySmartRefreshLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/base_dimen_100"
+        android:background="#F8FFFF"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/select_check_group"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/base_dimen_40"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/select_check_radio_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="选择终端"
+                android:textColor="#333333"
+                android:textSize="@dimen/base_dimen_28" />
+
+            <RadioButton
+                android:id="@+id/select_check_radio_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/base_dimen_40"
+                android:text="选择分组"
+                android:textColor="#333333"
+                android:textSize="@dimen/base_dimen_28" />
+
+        </RadioGroup>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/base_dimen_20"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/select_dev_line"
+            android:layout_width="@dimen/base_dimen_200"
+            android:layout_height="match_parent"
+            android:background="#255B7D"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/select_dev_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="全选"
+                android:textColor="@color/white"
+                android:textSize="@dimen/base_dimen_28" />
+
+            <CheckBox
+                android:id="@+id/select_dev_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:checked="false"
+                />
+
+<!--            <ImageView-->
+<!--                android:layout_width="@dimen/base_dimen_32"-->
+<!--                android:layout_height="@dimen/base_dimen_32"-->
+<!--                android:layout_marginLeft="@dimen/base_dimen_16"-->
+<!--                android:src="@mipmap/icon_select_choice" />-->
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
