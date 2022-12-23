@@ -51,6 +51,7 @@ public class FileActivity extends BaseActivity {
     private IDialog iDialog;
     private IDialog dialogBuilder;
     private List<SongData> list;
+    private FTPClient client;
     private int index = 0 ;//上传下标
 
     @Override
@@ -203,6 +204,8 @@ public class FileActivity extends BaseActivity {
         if(index < list.size()){
             uploadOne(list.get(index));
         }else {
+            FTPToolkit.closeConnection(client);
+            client = null;
             dialogBuilder.dismiss();
             UtilToast.showToast(activity,"上传成功");
         }
@@ -244,7 +247,8 @@ public class FileActivity extends BaseActivity {
             @Override
             public void run() {
                 try {
-                    FTPClient client = FTPToolkit.makeFtpConnection(host, port, data.getFtpUsr(), data.getFtpPwd());
+                    if(client == null)
+                        client = FTPToolkit.makeFtpConnection(host, port, data.getFtpUsr(), data.getFtpPwd());
                     FTPToolkit.upload(client, songData.path, str[2], new FTPDataTransferListener() {
 
                         @Override
@@ -313,6 +317,8 @@ public class FileActivity extends BaseActivity {
         public void handleMessage(@NonNull Message msg) {
             super.handleMessage(msg);
 //            iDialog.dismiss();
+            FTPToolkit.closeConnection(client);
+            client = null;
             if (msg.what == 1001) {
                 dialogBuilder.dismiss();
                 UtilToast.showToast(activity, "上传失败,请重试");

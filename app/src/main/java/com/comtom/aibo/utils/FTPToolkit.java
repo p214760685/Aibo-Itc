@@ -239,6 +239,7 @@ public final class FTPToolkit {
             return true;
         if (client.isConnected()) {
             try {
+                client.logout();
                 client.disconnect(true);
                 return true;
             } catch (Exception e) {
