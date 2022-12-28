@@ -31,7 +31,7 @@ public class AboutActivity extends BaseActivity {
         about_version.setText("版本：V" + getAppVersionName());
         iv_logo = findViewById(R.id.iv_logo);
         if(IConstant.ITC.equals(type)){
-            iv_logo.setImageResource(R.mipmap.flash_logo_hs);
+            iv_logo.setImageResource(R.mipmap.icon_login_logo);
         }else if(IConstant.THREEA.equals(type)){
             iv_logo.setImageResource(R.mipmap.a);
         }else if(IConstant.CRX.equals(type)){

@@ -36,7 +36,7 @@ public class SpalishActivity extends BaseActivity {
 
     @Override
     public int getLayoutId() {
-        return R.layout.activity_spalish;
+        return R.layout.activity_spalish_sb;
     }
 
     @Override
@@ -156,7 +156,7 @@ public class SpalishActivity extends BaseActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == XXPermissions.REQUEST_CODE) {
-            if (XXPermissions.isGrantedPermission(activity, Permission.WRITE_EXTERNAL_STORAGE) ) {
+            if (XXPermissions.isGrantedPermission(activity, Permission.MANAGE_EXTERNAL_STORAGE) ) {
                 Toast.makeText(activity,"权限设置成功",Toast.LENGTH_SHORT).show();
                 goLoginPage();
             } else {
