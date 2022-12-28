@@ -570,7 +570,7 @@ public class LoginNewActivity extends BaseActivity {
                 }
                 break;
                 case R.id.tvPrivacy: {
-                    UtilOpenWebView.openUrl(activity,"file:///android_asset/privacy.html","用户协议");
+                    UtilOpenWebView.openUrl(activity,"file:///android_asset/user.html","用户协议");
 //                    Intent intent = new Intent(activity, PrivacyActivity.class);
 //                    startActivity(intent);
                 }
