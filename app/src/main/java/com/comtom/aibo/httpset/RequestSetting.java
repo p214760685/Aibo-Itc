@@ -31,14 +31,14 @@ public class RequestSetting extends DefaultRequestSetting {
     @NonNull
     @Override
     public String getBaseUrl() {
-        return "http://" + ShareDate.getShare(context,IConstant.strServerIp_KEY,"10.0.0.1")  + ":8081/";
+        return "http://" + ShareDate.getShare(context,IConstant.strServerIp_KEY,"8.135.3.41")  + ":8081/";
     }
 
     @Nullable
     @Override
     public Map<String, String> getRedirectBaseUrl() {
         Map<String, String> url = new HashMap<>();
-        url.put("BaseUrl","http://" + ShareDate.getShare(context,IConstant.strServerIp_KEY,"10.0.0.1")  + ":8081/");
+        url.put("BaseUrl","http://" + ShareDate.getShare(context,IConstant.strServerIp_KEY,"8.135.3.41")  + ":8081/");
         return url;
     }
 

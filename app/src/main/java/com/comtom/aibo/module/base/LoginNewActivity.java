@@ -81,26 +81,26 @@ public class LoginNewActivity extends BaseActivity {
     @Override
     public void initView() {
 //        StatusBarUtils.setColor(this, Color.parseColor("#FFFFFF"));
-        String type = PublicUtil.getMetaDate(activity);
-        iv_logo = findViewById(R.id.iv_logo);
-        if(IConstant.ITC.equals(type)){
-//            iv_logo.setImageResource(R.mipmap.flash_logo_hs);
-//            iv_logo.setImageResource(R.mipmap.logo_itc_new);
-        }else if(IConstant.THREEA.equals(type)){
-            iv_logo.setImageResource(R.mipmap.a);
-        }else if(IConstant.CRX.equals(type)){
-            iv_logo.setImageResource(R.mipmap.logon_logo_crx);
-        }else if(IConstant.SL.equals(type)){
-            iv_logo.setImageResource(R.mipmap.logon_logo_sl);
-        }else if(IConstant.LS.equals(type)){
-            iv_logo.setImageResource(R.mipmap.logon_logo_ls);
-        }else if(IConstant.ZX.equals(type)){
-            iv_logo.setImageResource(R.mipmap.logon_logo_zx);
-        }else if(IConstant.DC.equals(type)){
-            iv_logo.setImageResource(R.mipmap.icon_dc);
-        }else if(IConstant.CEOPA.equals(type)){
-            iv_logo.setImageResource(R.mipmap.ceopa);
-        }
+//        String type = PublicUtil.getMetaDate(activity);
+//        iv_logo = findViewById(R.id.iv_logo);
+//        if(IConstant.ITC.equals(type)){
+////            iv_logo.setImageResource(R.mipmap.flash_logo_hs);
+////            iv_logo.setImageResource(R.mipmap.logo_itc_new);
+//        }else if(IConstant.THREEA.equals(type)){
+//            iv_logo.setImageResource(R.mipmap.a);
+//        }else if(IConstant.CRX.equals(type)){
+//            iv_logo.setImageResource(R.mipmap.logon_logo_crx);
+//        }else if(IConstant.SL.equals(type)){
+//            iv_logo.setImageResource(R.mipmap.logon_logo_sl);
+//        }else if(IConstant.LS.equals(type)){
+//            iv_logo.setImageResource(R.mipmap.logon_logo_ls);
+//        }else if(IConstant.ZX.equals(type)){
+//            iv_logo.setImageResource(R.mipmap.logon_logo_zx);
+//        }else if(IConstant.DC.equals(type)){
+//            iv_logo.setImageResource(R.mipmap.icon_dc);
+//        }else if(IConstant.CEOPA.equals(type)){
+//            iv_logo.setImageResource(R.mipmap.ceopa);
+//        }
 
         Intent intent = getIntent();
         if (null != intent) {
@@ -131,7 +131,7 @@ public class LoginNewActivity extends BaseActivity {
         TextView tvPrivacy = (TextView) findViewById(R.id.tvPrivacy);
         tvPrivacy.setOnClickListener(mOnClickListener);
 
-        strServerIp = ShareDate.getShare(activity,IConstant.strServerIp_KEY,"10.0.0.1");
+        strServerIp = ShareDate.getShare(activity,IConstant.strServerIp_KEY,"8.135.3.41");
 
         bChkSavePass = preferences.getBoolean(IConstant.strbSavePassDefaul_KEY,
                 IConstant.bSavePassDefaul);
@@ -640,7 +640,7 @@ public class LoginNewActivity extends BaseActivity {
         et = (EditText) findViewById(R.id.password_et_id);
         strPassword = et.getEditableText().toString();
 
-        strServerIp = ShareDate.getShare(activity,IConstant.strServerIp_KEY,"10.0.0.1");
+        strServerIp = ShareDate.getShare(activity,IConstant.strServerIp_KEY,"8.135.3.41");
 //        UtilLog.showNet("strServerIp==" + strServerIp);
         if (!UIUtil.isIpAddress(strServerIp)) {
             UIUtil.showToast("服务器ip有误,请正确配置",

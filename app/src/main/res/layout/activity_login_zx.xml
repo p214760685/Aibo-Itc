@@ -12,7 +12,7 @@
         android:orientation="vertical">
 
 
-        <ImageView
+        <com.comtom.aibo.view.RoundImageView
             android:id="@+id/iv_logo"
             android:layout_width="@dimen/base_dimen_288"
             android:layout_height="@dimen/base_dimen_288"

@@ -8,7 +8,7 @@
     android:background="#FFFFFF" >
 
 
-    <ImageView
+    <com.comtom.aibo.view.RoundImageView
         android:id="@+id/flash_logo"
         android:layout_width="@dimen/base_dimen_288"
         android:layout_height="@dimen/base_dimen_288"

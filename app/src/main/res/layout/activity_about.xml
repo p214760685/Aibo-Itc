@@ -8,10 +8,11 @@
     <include layout="@layout/title_view" />
 
 
-    <ImageView
+    <com.comtom.aibo.view.RoundImageView
         android:id="@+id/iv_logo"
         android:layout_width="@dimen/base_dimen_288"
         android:layout_height="@dimen/base_dimen_288"
+        android:src="@mipmap/icon_logo_lt"
         android:layout_marginTop="@dimen/base_dimen_240" />
 
     <TextView
@@ -23,4 +24,52 @@
         android:textColor="#333333"
         android:textSize="@dimen/base_dimen_28"
         />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/base_dimen_20"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="使用播控端APP即代表您已阅读和同意"
+            android:textColor="#333333"
+            android:textSize="@dimen/base_dimen_22"
+            />
+        <TextView
+            android:id="@+id/about_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="《用户协议》"
+            android:textColor="#005EFF"
+            android:textSize="@dimen/base_dimen_22"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="、"
+            android:textColor="#333333"
+            android:textSize="@dimen/base_dimen_22"
+            />
+
+        <TextView
+            android:id="@+id/about_private"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="《隐私政策》"
+            android:textColor="#005EFF"
+            android:textSize="@dimen/base_dimen_22"
+            />
+
+
+    </LinearLayout>
 </LinearLayout>
