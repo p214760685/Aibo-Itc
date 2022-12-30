@@ -1,9 +1,19 @@
 package com.comtom.aibo.module.base;
 
+import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.text.SpannableStringBuilder;
+import android.text.Spanned;
+import android.text.method.LinkMovementMethod;
+import android.text.style.ClickableSpan;
+import android.text.style.ForegroundColorSpan;
+import android.text.style.TextAppearanceSpan;
+import android.text.style.UnderlineSpan;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -19,12 +29,17 @@ import com.comtom.aibo.utils.StatusBarColorCompat;
 import com.haozi.dev.smartframe.utils.permissions.OnPermissionCallback;
 import com.haozi.dev.smartframe.utils.permissions.Permission;
 import com.haozi.dev.smartframe.utils.permissions.XXPermissions;
+import com.haozi.dev.smartframe.utils.tool.ShareDate;
+import com.haozi.dev.smartframe.utils.tool.UtilOpenWebView;
 
 import java.util.List;
+
+import cn.yhq.dialog.core.DialogBuilder;
 
 public class SpalishActivity extends BaseActivity {
     private RelativeLayout rl_flash_bg ;
     private TextView flash_copyright ;
+    private Dialog dialog;
     private ImageView flash_logo ,flash_small_logo,flash_bottom_logo,flash_bottom_option,flash_right;
 
 
@@ -41,6 +56,7 @@ public class SpalishActivity extends BaseActivity {
 
     @Override
     public void initView() {
+        initDialog();
 //        rl_flash_bg = findViewById(R.id.rl_flash_bg);
 //        flash_logo = findViewById(R.id.flash_logo);
 //        flash_bottom_logo = findViewById(R.id.flash_bottom_logo);
@@ -108,10 +124,64 @@ public class SpalishActivity extends BaseActivity {
 //        }else {
 //        }
     }
+
+    private void initDialog(){
+        dialog = new Dialog(activity);
+        View view = getLayoutInflater().inflate(R.layout.dialog_text_html, null);
+        view.findViewById(R.id.dialog_btn_agree).setOnClickListener(v -> {
+            ShareDate.setShareInt(activity,"first_html",1);
+            goLoginPage();
+        });
+        view.findViewById(R.id.dialog_btn_calse).setOnClickListener(v -> {
+            finish();
+        });
+        TextView text_dialog_html = view.findViewById(R.id.text_dialog_html);
+        String str = "我们依据相关法律制定了《用户协议》和《隐私政策》，请您在点击同意之前仔细阅读并充分理解相关条款";
+        SpannableStringBuilder spannableBuilder = new SpannableStringBuilder(str);
+        UnderlineSpan underlineSpan = new UnderlineSpan();
+        ForegroundColorSpan colorSpan = new ForegroundColorSpan(Color.parseColor("#c77f41"));
+//        TextAppearanceSpan colorSpan = new TextAppearanceSpan(activity,Color.parseColor("#c77f41"));
+        ClickableSpan clickableSpanOne = new ClickableSpan() {
+            @Override
+            public void onClick(View view) {
+                UtilOpenWebView.openUrl(activity,"file:///android_asset/user.html","用户协议");
+            }
+        };
+        ClickableSpan clickableSpanTwo = new ClickableSpan() {
+            @Override
+            public void onClick(View view) {
+                UtilOpenWebView.openUrl(activity,"file:///android_asset/privacy.html","隐私政策");
+            }
+        };
+        spannableBuilder.setSpan(clickableSpanOne, 11, 17, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannableBuilder.setSpan(clickableSpanTwo, 18, 24, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannableBuilder.setSpan(new ForegroundColorSpan(Color.parseColor("#c77f41")), 18, 24, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannableBuilder.setSpan(new UnderlineSpan(), 18, 24, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannableBuilder.setSpan(new ForegroundColorSpan(Color.parseColor("#c77f41")), 11, 17, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannableBuilder.setSpan(new UnderlineSpan(), 11, 17, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        text_dialog_html.setMovementMethod(LinkMovementMethod.getInstance());
+        text_dialog_html.setText(spannableBuilder);
+        text_dialog_html.setHighlightColor(Color.TRANSPARENT);
+        dialog.setContentView(view);
+        dialog.setCancelable(false);
+    }
+
     @Override
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
-        mHandler.sendMessageDelayed(new Message(), 1000);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                int flag =  ShareDate.getShareInt(activity, "first_html",0);
+                if(flag == 1){
+                    goLoginPage();
+                }else{
+                    dialog.show();
+                }
+            }
+        },1500);
+
+//        mHandler.sendMessageDelayed(new Message(), 1000);
     }
 
     Handler mHandler = new Handler() {

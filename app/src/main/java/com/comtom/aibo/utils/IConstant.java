@@ -38,7 +38,7 @@ public interface IConstant {
 	String taskNameIndex_KEY = "taskNameIndex";
 	String speakNameIndex_KEY = "speakNameIndex";
 
-	String strdefaultUserName = "admin";
+	String strdefaultUserName = "";
 	String strdefaultUserPassword = "";
 
 	String strTermArrayPos_KEY = "TERMARRAYPOS_KEY";

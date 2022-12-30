@@ -12,14 +12,14 @@
         android:id="@+id/flash_logo"
         android:layout_width="@dimen/base_dimen_288"
         android:layout_height="@dimen/base_dimen_288"
-        android:src="@mipmap/icon_login_logo"
+        android:src="@mipmap/icon_logo_lt"
         android:layout_marginTop="@dimen/base_dimen_250"
         android:layout_centerHorizontal="true"
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#70A67F"
+        android:textColor="#c77f41"
         android:layout_marginTop="@dimen/base_dimen_50"
         android:textSize="@dimen/base_dimen_40"
         android:text="打造全球顶尖的音视频平台"

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:minWidth="@dimen/base_dimen_640"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/bg_white_dialog"
+    android:padding="@dimen/base_dimen_30"
+    >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="服务条款和隐私保护提示"
+            android:textSize="@dimen/base_dimen_32"
+            android:textColor="#333333"
+            android:textStyle="bold"
+            />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/base_dimen_600"
+        android:layout_marginTop="@dimen/base_dimen_20"
+        android:scrollbars="none"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="欢迎使用播控端APP"
+                android:textColor="#333333"
+                android:textSize="@dimen/base_dimen_28"
+                />
+
+            <TextView
+                android:id="@+id/text_dialog_html"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/base_dimen_30"
+                android:textColor="#333333"
+                android:textSize="@dimen/base_dimen_28"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="我们将严格按照上述协议为您提供服务，保护您的信息安全。"
+                android:textColor="#333333"
+                android:layout_marginTop="@dimen/base_dimen_30"
+                android:textSize="@dimen/base_dimen_28"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="为方便您阅读和理解上述协议，我们将通过下方隐私政策摘要，向您展示我们手机使用您个人信息的类型、目的与范围："
+                android:textColor="#333333"
+                android:layout_marginTop="@dimen/base_dimen_30"
+                android:textSize="@dimen/base_dimen_28"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="获取本地读写权限"
+                android:layout_marginTop="@dimen/base_dimen_30"
+                android:textColor="#333333"
+                android:textSize="@dimen/base_dimen_28"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="使用目的：上传本地音频文件，用于文件广播功能实现"
+                android:layout_marginTop="@dimen/base_dimen_10"
+                android:textColor="#333333"
+                android:textSize="@dimen/base_dimen_28"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="获取麦克风权限"
+                android:layout_marginTop="@dimen/base_dimen_30"
+                android:textColor="#333333"
+                android:textSize="@dimen/base_dimen_28"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="使用目的：用于一键喊话功能实现"
+                android:layout_marginTop="@dimen/base_dimen_10"
+                android:textColor="#333333"
+                android:textSize="@dimen/base_dimen_28"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="设备属性信息"
+                android:layout_marginTop="@dimen/base_dimen_30"
+                android:textColor="#333333"
+                android:textSize="@dimen/base_dimen_28"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="使用目的：履行维护网络安全义务、提高使用服务的安全性"
+                android:layout_marginTop="@dimen/base_dimen_10"
+                android:textColor="#333333"
+                android:textSize="@dimen/base_dimen_28"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <com.haozi.dev.smartframe.view.AnimationLinearLayout
+        android:id="@+id/dialog_btn_agree"
+        android:layout_width="@dimen/base_dimen_400"
+        android:layout_height="@dimen/base_dimen_80"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/bg_new_login_btn_lt"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="同意"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/base_dimen_36" />
+
+    </com.haozi.dev.smartframe.view.AnimationLinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/dialog_btn_calse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="不同意并退出APP"
+        android:layout_marginTop="@dimen/base_dimen_30"
+        android:textColor="#666666"
+        android:textSize="@dimen/base_dimen_24"
+        />
+
+
+</LinearLayout>

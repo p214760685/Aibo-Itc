@@ -18,7 +18,7 @@
             android:layout_height="@dimen/base_dimen_288"
             android:layout_marginTop="@dimen/base_dimen_128"
             android:layout_gravity="center_horizontal"
-            android:src="@mipmap/icon_login_logo"
+            android:src="@mipmap/icon_logo_lt"
             android:visibility="visible" />
 
 
@@ -41,7 +41,7 @@
                 <ImageView
                     android:layout_width="@dimen/base_dimen_48"
                     android:layout_height="@dimen/base_dimen_48"
-                    android:src="@mipmap/icon_new_login_accout_zx" />
+                    android:src="@mipmap/icon_new_login_accout_lt" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -77,7 +77,7 @@
                             android:layout_marginLeft="@dimen/base_dimen_10"
                             android:layout_marginRight="@dimen/base_dimen_10"
                             android:padding="@dimen/base_dimen_5"
-                            android:src="@mipmap/icon_shout_close_zx"
+                            android:src="@mipmap/icon_shout_close_lt"
                             android:visibility="invisible" />
 
                         <ImageView
@@ -89,7 +89,7 @@
                             android:layout_marginLeft="@dimen/base_dimen_10"
                             android:layout_marginRight="@dimen/base_dimen_20"
                             android:padding="@dimen/base_dimen_20"
-                            android:src="@mipmap/logon_more_bt_bg_zx"
+                            android:src="@mipmap/logon_more_bt_bg_lt"
                             android:visibility="visible" />
 
 
@@ -99,7 +99,7 @@
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="0.5dp"
-                        android:background="#70A67F" />
+                        android:background="#c77f41" />
 
                 </LinearLayout>
 
@@ -116,7 +116,7 @@
                 <ImageView
                     android:layout_width="@dimen/base_dimen_48"
                     android:layout_height="@dimen/base_dimen_48"
-                    android:src="@mipmap/icon_new_login_pwd_zx" />
+                    android:src="@mipmap/icon_new_login_pwd_lt" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -142,7 +142,7 @@
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="0.5dp"
-                        android:background="#70A67F" />
+                        android:background="#c77f41" />
 
                 </LinearLayout>
 
@@ -155,7 +155,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/base_dimen_96"
                 android:layout_marginTop="40dp"
-                android:background="@drawable/bg_new_login_btn_zx"
+                android:background="@drawable/bg_new_login_btn_lt"
                 android:gravity="center"
                 android:orientation="vertical">
 
@@ -184,7 +184,7 @@
                     android:layout_height="wrap_content"
                     android:checked="true"
                     android:gravity="center_vertical"
-                    android:buttonTint="#70A67F"
+                    android:buttonTint="#c77f41"
                     android:paddingLeft="@dimen/base_dimen_10"
                     android:text="保存密码"
                     android:textColor="#333333"
@@ -201,7 +201,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="true"
-                    android:buttonTint="#70A67F"
+                    android:buttonTint="#c77f41"
                     android:gravity="center_vertical"
                     android:paddingLeft="@dimen/base_dimen_10" />
 
@@ -233,7 +233,7 @@
                     android:id="@+id/login_ip_set"
                     android:layout_width="@dimen/base_dimen_112"
                     android:layout_height="@dimen/base_dimen_80"
-                    android:background="@drawable/bg_new_login_set_zx"
+                    android:background="@drawable/bg_new_login_set_lt"
                     android:gravity="center"
                     android:text="设置"
                     android:textColor="#FFFFFF"
@@ -252,7 +252,7 @@
                         android:layout_width="0dp"
                         android:layout_height="@dimen/base_dimen_80"
                         android:layout_weight="1"
-                        android:background="@drawable/bg_new_login_set_zx"
+                        android:background="@drawable/bg_new_login_set_lt"
                         android:hint="请输入服务器IP地址"
                         android:padding="@dimen/base_dimen_10"
                         android:saveEnabled="true"
@@ -266,7 +266,7 @@
                         android:layout_width="@dimen/base_dimen_112"
                         android:layout_height="@dimen/base_dimen_80"
                         android:layout_marginLeft="@dimen/base_dimen_16"
-                        android:background="@drawable/bg_new_login_set_zx"
+                        android:background="@drawable/bg_new_login_set_lt"
                         android:gravity="center"
                         android:text="取消"
                         android:textColor="#ffffff"
@@ -277,7 +277,7 @@
                         android:layout_width="@dimen/base_dimen_112"
                         android:layout_height="@dimen/base_dimen_80"
                         android:layout_marginLeft="@dimen/base_dimen_16"
-                        android:background="@drawable/bg_new_login_set_zx"
+                        android:background="@drawable/bg_new_login_set_lt"
                         android:gravity="center"
                         android:text="确定"
                         android:textColor="#ffffff"
